@@ -25,8 +25,11 @@
       <p>Quick, tested recipes you can make at home. Browse desserts and more.</p>
     </section>
 
-    <section id="recipes">
-      <h3>Featured Recipes</h3>
+    <section id="recipes" style="display:none;">
+      <h3>Recipes</h3>
+      <div style="margin-bottom: 1rem;">
+        <input type="text" id="search-box" placeholder="Search recipes..." style="width:100%;max-width:300px;padding:0.5rem;border:1px solid #ddd;border-radius:4px;font-size:1rem;">
+      </div>
       <div class="grid" id="recipe-list">
         <!-- Recipes injected by JS -->
       </div>
@@ -43,7 +46,7 @@
     <div class="container">© <span id="year"></span> Simple Recipes by Easton</div>
   </footer>
 
-  <script src="recipes.js"></script>
+  <script src="recipes-large.js"></script>
   <script src="site.js"></script>
 </body>
 </html>
