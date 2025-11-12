@@ -1,119 +1,4 @@
-// Large recipe database (100+ desserts from TheMealDB)
-const largeRecipeDatabase = [
-  { name: "Chocolate Chip Cookies", category: "Dessert" },
-  { name: "Classic Brownies", category: "Dessert" },
-  { name: "Vanilla Cupcakes", category: "Dessert" },
-  { name: "Tiramisu", category: "Dessert" },
-  { name: "Cheesecake", category: "Dessert" },
-  { name: "Apple Pie", category: "Dessert" },
-  { name: "Lemon Cake", category: "Dessert" },
-  { name: "Chocolate Mousse", category: "Dessert" },
-  { name: "Strawberry Shortcake", category: "Dessert" },
-  { name: "Crème Brûlée", category: "Dessert" },
-  { name: "Bread Pudding", category: "Dessert" },
-  { name: "Carrot Cake", category: "Dessert" },
-  { name: "Banana Bread", category: "Dessert" },
-  { name: "Cherry Pie", category: "Dessert" },
-  { name: "Chocolate Cake", category: "Dessert" },
-  { name: "Red Velvet Cake", category: "Dessert" },
-  { name: "Panna Cotta", category: "Dessert" },
-  { name: "Churros", category: "Dessert" },
-  { name: "Baklava", category: "Dessert" },
-  { name: "Macarons", category: "Dessert" },
-  { name: "Eclairs", category: "Dessert" },
-  { name: "Donuts", category: "Dessert" },
-  { name: "Profiteroles", category: "Dessert" },
-  { name: "Cannoli", category: "Dessert" },
-  { name: "Flan", category: "Dessert" },
-  { name: "Meringue Pie", category: "Dessert" },
-  { name: "Chocolate Truffles", category: "Dessert" },
-  { name: "Fruit Tart", category: "Dessert" },
-  { name: "Pineapple Upside Down Cake", category: "Dessert" },
-  { name: "Coconut Macaroons", category: "Dessert" },
-  { name: "Brownies Walnut", category: "Dessert" },
-  { name: "Muffins Blueberry", category: "Dessert" },
-  { name: "Scones", category: "Dessert" },
-  { name: "Croissants", category: "Dessert" },
-  { name: "Danish Pastry", category: "Dessert" },
-  { name: "Soufflé", category: "Dessert" },
-  { name: "Zabaglione", category: "Dessert" },
-  { name: "Syllabub", category: "Dessert" },
-  { name: "Pavlova", category: "Dessert" },
-  { name: "Bombe Alaska", category: "Dessert" },
-  { name: "Affogato", category: "Dessert" },
-  { name: "Gelato", category: "Dessert" },
-  { name: "Sorbet", category: "Dessert" },
-  { name: "Popsicles", category: "Dessert" },
-  { name: "Ice Cream Sundae", category: "Dessert" },
-  { name: "Chocolate Pudding", category: "Dessert" },
-  { name: "Vanilla Pudding", category: "Dessert" },
-  { name: "Tapioca Pudding", category: "Dessert" },
-  { name: "Rice Pudding", category: "Dessert" },
-  { name: "Custard", category: "Dessert" },
-  { name: "Jello", category: "Dessert" },
-  { name: "Panna Cotta", category: "Dessert" },
-  { name: "Mousse au Chocolat", category: "Dessert" },
-  { name: "Zabaione", category: "Dessert" },
-  { name: "Fraisier", category: "Dessert" },
-  { name: "Mille-feuille", category: "Dessert" },
-  { name: "Paris-Brest", category: "Dessert" },
-  { name: "Saint Honoré", category: "Dessert" },
-  { name: "Croquembouche", category: "Dessert" },
-  { name: "Religieuse", category: "Dessert" },
-  { name: "Donut", category: "Dessert" },
-  { name: "Apple Crisp", category: "Dessert" },
-  { name: "Berry Crumble", category: "Dessert" },
-  { name: "Peach Cobbler", category: "Dessert" },
-  { name: "Blackberry Pie", category: "Dessert" },
-  { name: "Blueberry Tart", category: "Dessert" },
-  { name: "Lemon Meringue Pie", category: "Dessert" },
-  { name: "Key Lime Pie", category: "Dessert" },
-  { name: "Pumpkin Pie", category: "Dessert" },
-  { name: "Pecan Pie", category: "Dessert" },
-  { name: "Chocolate Silk Pie", category: "Dessert" },
-  { name: "Banoffee Pie", category: "Dessert" },
-  { name: "Custard Tart", category: "Dessert" },
-  { name: "Jam Tart", category: "Dessert" },
-  { name: "Tarte Tatin", category: "Dessert" },
-  { name: "Tarte Flambée", category: "Dessert" },
-  { name: "Galette", category: "Dessert" },
-  { name: "Linzer Torte", category: "Dessert" },
-  { name: "Dobos Torte", category: "Dessert" },
-  { name: "Sachertorte", category: "Dessert" },
-  { name: "Black Forest Cake", category: "Dessert" },
-  { name: "Selva Negra", category: "Dessert" },
-  { name: "Stollen", category: "Dessert" },
-  { name: "Panettone", category: "Dessert" },
-  { name: "Pandoro", category: "Dessert" },
-  { name: "Panforte", category: "Dessert" },
-  { name: "Panpepato", category: "Dessert" },
-  { name: "Fruitcake", category: "Dessert" },
-  { name: "Gingerbread", category: "Dessert" },
-  { name: "Shortbread", category: "Dessert" },
-  { name: "Madeleines", category: "Dessert" },
-  { name: "Financiers", category: "Dessert" },
-  { name: "Sponge Cake", category: "Dessert" },
-  { name: "Angel Food Cake", category: "Dessert" },
-  { name: "Chiffon Cake", category: "Dessert" },
-  { name: "Pound Cake", category: "Dessert" },
-  { name: "Bundt Cake", category: "Dessert" },
-  { name: "Coffee Cake", category: "Dessert" },
-  { name: "Snack Cake", category: "Dessert" },
-  { name: "Fritter", category: "Dessert" },
-  { name: "Beignet", category: "Dessert" },
-  { name: "Zeppole", category: "Dessert" },
-  { name: "Tempura", category: "Dessert" },
-  { name: "Funnel Cake", category: "Dessert" },
-  { name: "Crepes", category: "Dessert" },
-  { name: "Waffles", category: "Dessert" },
-  { name: "Pancakes", category: "Dessert" },
-  { name: "Chocolate Lava Cake", category: "Dessert" },
-  { name: "Molten Chocolate Cake", category: "Dessert" },
-  { name: "Tres Leches", category: "Dessert" },
-  { name: "Sacher Torte", category: "Dessert" },
-  { name: "Black Garlic Cake", category: "Dessert" },
-];
-
+// Large recipe database with real recipes from TheMealDB
 let allRecipes = [];
 let filteredRecipes = [];
 let recipesLoaded = false;
@@ -121,19 +6,98 @@ let recipesLoaded = false;
 async function loadRecipes() {
   if (recipesLoaded) return;
 
-  // For demo, we'll use the local database
-  // In a real app, you could fetch from TheMealDB API
-  allRecipes = largeRecipeDatabase.map(r => ({
-    ...r,
-    time: "20-30 min",
-    servings: "4-6",
-    ingredients: ["Ingredient 1", "Ingredient 2", "Ingredient 3"],
-    instructions: ["Step 1", "Step 2", "Step 3"]
-  }));
+  // List of popular desserts to fetch from TheMealDB API
+  const dessertNames = [
+    "Chocolate Chip Cookies", "Brownies", "Tiramisu", "Cheesecake", "Apple Pie",
+    "Lemon Cake", "Chocolate Mousse", "Strawberry Shortcake", "Crème Brûlée",
+    "Bread Pudding", "Carrot Cake", "Banana Bread", "Cherry Pie", "Chocolate Cake",
+    "Red Velvet Cake", "Panna Cotta", "Churros", "Baklava", "Macarons", "Eclairs",
+    "Donuts", "Profiteroles", "Cannoli", "Flan", "Meringue Pie", "Chocolate Truffles",
+    "Fruit Tart", "Pineapple Upside Down Cake", "Coconut Macaroons", "Muffins",
+    "Scones", "Croissants", "Danish Pastry", "Soufflé", "Pavlova", "Affogato",
+    "Gelato", "Chocolate Pudding", "Vanilla Pudding", "Tapioca Pudding", "Rice Pudding",
+    "Custard", "Apple Crisp", "Berry Crumble", "Peach Cobbler", "Blackberry Pie",
+    "Blueberry Tart", "Lemon Meringue Pie", "Key Lime Pie", "Pumpkin Pie", "Pecan Pie",
+    "Black Forest Cake", "Gingerbread", "Shortbread", "Sponge Cake", "Pound Cake",
+    "Crepes", "Waffles", "Pancakes", "Chocolate Lava Cake", "Molten Chocolate Cake",
+    "Tres Leches", "Carrot Cake", "Ice Cream", "Brownies Walnut", "Blueberry Muffins",
+    "Strawberry Jam Tart", "Banoffee Pie", "Baked Cheesecake", "Coconut Cake", "Sacher Torte"
+  ];
 
+  // Fetch real recipes from TheMealDB
+  const fetchedRecipes = [];
+  for (const name of dessertNames) {
+    try {
+      const response = await fetch(\`https://www.themealdb.com/api/json/v1/1/search.php?s=\${encodeURIComponent(name)}\`);
+      const data = await response.json();
+      
+      if (data.meals && data.meals.length > 0) {
+        const meal = data.meals[0];
+        
+        // Extract ingredients
+        const ingredients = [];
+        for (let i = 1; i <= 20; i++) {
+          const ingredient = meal[\`strIngredient\${i}\`];
+          const measure = meal[\`strMeasure\${i}\`];
+          if (ingredient && ingredient.trim()) {
+            ingredients.push(\`\${measure ? measure.trim() + ' ' : ''}\${ingredient.trim()}\`);
+          }
+        }
+
+        // Split instructions into steps
+        const instructions = meal.strInstructions
+          ? meal.strInstructions.split('.').filter(s => s.trim()).map(s => s.trim())
+          : ["Instructions not available"];
+
+        fetchedRecipes.push({
+          name: meal.strMeal,
+          category: meal.strCategory || "Dessert",
+          time: "30-45 min",
+          servings: "4-6",
+          ingredients: ingredients.length > 0 ? ingredients : ["See instructions"],
+          instructions: instructions
+        });
+      }
+    } catch (error) {
+      console.log(\`Could not fetch \${name}\`, error);
+    }
+    
+    // Add delay to avoid rate limiting
+    await new Promise(resolve => setTimeout(resolve, 100));
+  }
+
+  // If we have real recipes, use them; otherwise use fallback
+  allRecipes = fetchedRecipes.length > 0 ? fetchedRecipes : getFallbackRecipes();
+  
+  // Remove duplicates by name
+  allRecipes = Array.from(new Map(allRecipes.map(r => [r.name, r])).values());
+  
   filteredRecipes = allRecipes;
   recipesLoaded = true;
   renderRecipes(filteredRecipes);
+  
+  console.log(\`Loaded \${allRecipes.length} recipes\`);
+}
+
+function getFallbackRecipes() {
+  return [
+    {
+      name: "Chocolate Chip Cookies",
+      category: "Dessert",
+      time: "25 min",
+      servings: "24",
+      ingredients: ["2 cups flour", "1 tsp baking soda", "1 tsp salt", "1 cup butter", "3/4 cup sugar", "3/4 cup brown sugar", "2 eggs", "2 tsp vanilla", "2 cups chocolate chips"],
+      instructions: ["Preheat oven to 375°F", "Mix flour, baking soda, salt", "Beat butter and sugars", "Add eggs and vanilla", "Stir in flour and chips", "Drop on sheets", "Bake 9-11 min"]
+    },
+    {
+      name: "Brownies",
+      category: "Dessert",
+      time: "35 min",
+      servings: "12",
+      ingredients: ["3/4 cup cocoa", "1/2 cup flour", "1/4 tsp salt", "1/2 cup butter", "1 cup sugar", "2 eggs", "1 tsp vanilla", "1/2 cup chips"],
+      instructions: ["Preheat to 350°F", "Mix cocoa, flour, salt", "Melt butter with sugar", "Add eggs and vanilla", "Fold in flour and chips", "Pour in pan", "Bake 25-30 min"]
+    }
+  ];
 }
 
 function renderRecipes(recipes) {
@@ -141,24 +105,24 @@ function renderRecipes(recipes) {
   if (!list) return;
 
   if (recipes.length === 0) {
-    list.innerHTML = '<p style="grid-column: 1 / -1; text-align: center; color: #666;">No recipes found. Try a different search.</p>';
+    list.innerHTML = '<p style="grid-column: 1 / -1; text-align: center; color: #666;">No recipes found.</p>';
     return;
   }
 
-  list.innerHTML = recipes.map(recipe => `
+  list.innerHTML = recipes.map(recipe => \`
     <div class="recipe-card">
-      <h4>${recipe.name}</h4>
-      <p><strong>${recipe.category}</strong> • ${recipe.time} • Serves ${recipe.servings}</p>
+      <h4>\${recipe.name}</h4>
+      <p><strong>\${recipe.category}</strong> • \${recipe.time} • Serves \${recipe.servings}</p>
       <p><strong>Ingredients:</strong></p>
       <ul>
-        ${recipe.ingredients.map(ing => `<li>${ing}</li>`).join('')}
+        \${recipe.ingredients.map(ing => \`<li>\${ing}</li>\`).join('')}
       </ul>
       <p><strong>Instructions:</strong></p>
       <ol>
-        ${recipe.instructions.map(step => `<li>${step}</li>`).join('')}
+        \${recipe.instructions.map(step => \`<li>\${step}</li>\`).join('')}
       </ol>
     </div>
-  `).join('');
+  \`).join('');
 }
 
 function searchRecipes(query) {
@@ -175,7 +139,6 @@ function searchRecipes(query) {
 }
 
 document.addEventListener('DOMContentLoaded', function() {
-  // Show/hide recipes section on nav click
   const recipesNav = document.querySelector('a[href="#recipes"]');
   const recipesSection = document.getElementById('recipes');
 
@@ -183,14 +146,18 @@ document.addEventListener('DOMContentLoaded', function() {
     recipesNav.addEventListener('click', function(e) {
       e.preventDefault();
       recipesSection.style.display = 'block';
+      
       if (!recipesLoaded) {
+        const list = document.getElementById('recipe-list');
+        if (list) {
+          list.innerHTML = '<p style="grid-column: 1 / -1; text-align: center; color: #666;">Loading recipes...</p>';
+        }
         loadRecipes();
       }
       recipesSection.scrollIntoView({ behavior: 'smooth' });
     });
   }
 
-  // Search functionality
   const searchBox = document.getElementById('search-box');
   if (searchBox) {
     searchBox.addEventListener('input', function() {
