@@ -61,3 +61,24 @@ html, body {
   .recipe-card { padding: 1rem; }
   nav a { font-size: 0.9rem; }
 }
+/* === Graffiti Title Style === */
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+
+.graffiti-title {
+  font-family: 'Permanent Marker', cursive;
+  font-size: 3rem;
+  color: #ff3b3b;
+  text-shadow:
+    2px 2px 0 #000,
+    4px 4px 0 #222,
+    6px 6px 0 #444;
+  letter-spacing: 2px;
+  margin: 1rem 0;
+  text-align: center;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.graffiti-title:hover {
+  color: #ffb700;
+  transform: scale(1.1) rotate(-1deg);
+}
