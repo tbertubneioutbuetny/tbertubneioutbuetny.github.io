@@ -112,6 +112,17 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }
 
+  const drinksNav = document.querySelector('a[href="#drinks"]');
+  const drinksSection = document.getElementById('drinks');
+
+  if (drinksNav) {
+    drinksNav.addEventListener('click', function(e) {
+      e.preventDefault();
+      drinksSection.style.display = 'block';
+      drinksSection.scrollIntoView({ behavior: 'smooth' });
+    });
+  }
+
   const searchBox = document.getElementById('search-box');
   if (searchBox) {
     searchBox.addEventListener('input', function() {
