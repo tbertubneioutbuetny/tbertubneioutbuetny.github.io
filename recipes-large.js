@@ -99,6 +99,18 @@ function searchRecipes(query) {
   renderRecipes(filteredRecipes);
 }
 
+function searchDrinks(query) {
+  if (!query.trim()) {
+    filteredDrinks = drinks;
+  } else {
+    const lowerQuery = query.toLowerCase();
+    filteredDrinks = drinks.filter(d => 
+      d.name.toLowerCase().includes(lowerQuery)
+    );
+  }
+  renderDrinks(filteredDrinks);
+}
+
 document.addEventListener('DOMContentLoaded', function() {
   const recipesNav = document.querySelector('a[href="#recipes"]');
   const recipesSection = document.getElementById('recipes');
