@@ -6,8 +6,8 @@ document.addEventListener('DOMContentLoaded', function() {
     yearEl.textContent = new Date().getFullYear();
   }
 
-  // Smooth scroll for navigation links (except recipes, handled in recipes-large.js)
-  document.querySelectorAll('a[href^="#"]:not(a[href="#recipes"])').forEach(link => {
+  // Smooth scroll for navigation links (except recipes and drinks, handled in recipes-large.js)
+  document.querySelectorAll('a[href^="#"]:not(a[href="#recipes"]):not(a[href="#drinks"])').forEach(link => {
     link.addEventListener('click', function(e) {
       const target = document.querySelector(this.getAttribute('href'));
       if (target) {
