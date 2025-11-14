@@ -1,28 +1,31 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <link rel="icon" href="favicon.ico">
   <meta property="og:title" content="Simple Recipes">
-  <meta property="og:description" content="Quick, tested dessert and drink recipes.">
+  <meta property="og:description" content="Quick, tested dessert recipes.">
   <meta property="og:type" content="website">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Simple Recipes</title>
+
   <link rel="stylesheet" href="style.css">
-  <meta name="description" content="A recipe site featuring desserts and simple meals.">
+  <meta name="description" content="A recipe site featuring desserts.">
 </head>
+
 <body>
   <header class="site-header">
     <div class="container">
       <h1 class="graffiti-title">Simple Recipes</h1>
 
-      <nav>
+      <nav class="nav-links">
         <a href="#home">Home</a>
         <a href="#recipes">Desserts</a>
-        
         <a href="#tools">Tools</a>
       </nav>
     </div>
@@ -31,34 +34,40 @@
   <main class="container">
     <section id="home" class="hero">
       <h2>Welcome to Simple Recipes</h2>
-      <p>Quick, tested dessert recipes and refreshing drinks you can make at home.</p>
+      <p>Quick, tested dessert recipes you can make at home.</p>
     </section>
 
     <section id="recipes" style="display:none;">
       <h3>Dessert Recipes</h3>
-      <div style="margin-bottom: 1rem;">
-        <input type="text" id="search-box" placeholder="Search recipes..." style="width:100%;max-width:300px;padding:0.5rem;border:1px solid #ddd;border-radius:4px;font-size:1rem;">
-      </div>
-      <div class="grid" id="recipe-list">
-        <!-- Recipes injected by JS -->
-      </div>
-    </section>
 
-    
+      <div style="margin-bottom: 1rem;">
+        <input type="text" id="search-box" placeholder="Search recipes..."
+        style="width:100%;max-width:300px;padding:0.5rem;border:1px solid #ddd;border-radius:4px;font-size:1rem;">
+      </div>
+
+      <div class="grid" id="recipe-list"></div>
+    </section>
 
     <section id="tools">
       <h3>Tools</h3>
-      <p>Download the included Python helper to look up dessert recipes from TheMealDB API.</p>
-      <p><a href="dessert_ai.py" download>Download dessert_ai.py</a></p>
+      <p>Download the Python helper to look up dessert recipes from TheMealDB API.</p>
+      <p><a class="download-btn" href="dessert_ai.py" download>Download dessert_ai.py</a></p>
     </section>
   </main>
+  <!-- ==== RECIPE MODAL ==== -->
+<div id="recipe-modal" class="modal">
+  <div class="modal-box" id="modal-content">
+    <!-- content gets injected -->
+  </div>
+
+  <button id="close-modal" class="close-btn">×</button>
+</div>
 
   <footer class="site-footer">
-    <div class="container">© <span id="year"></span> Simple Recipes by Easton</div>
+    <div class="container">© <span id="year"></span> Simple Recipes — By Easton</div>
   </footer>
 
-  <script defer src="recipes-large.js?v=2"></script>
-  <script defer src="site.js?v=2"></script>
-
+  <script defer src="recipes-large.js?v=3"></script>
+  <script defer src="site.js?v=3"></script>
 </body>
 </html>
